@@ -1,0 +1,24 @@
+<mxfile host="app.diagrams.net" modified="2026-05-07T16:30:11.607489Z" agent="StockFlow" version="24.7.17" type="device"><diagram id="diagrama-classes" name="Diagrama de Classes"><mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0"><root><mxCell id="0"/><mxCell id="1" parent="0"/><mxCell id="cls_user" value="User|id: int
+nome: str
+email: str
+senha_hash: str
+perfil: str
+ativo: bool|" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1"><mxGeometry x="60" y="70" width="230" height="170" as="geometry"/></mxCell><mxCell id="cls_prod" value="Produto|id: int
+nome: str
+categoria: str
+quantidade: int
+peso: float
+preco: float|" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1"><mxGeometry x="470" y="70" width="240" height="190" as="geometry"/></mxCell><mxCell id="cls_mov" value="MovimentoEstoque|id: int
+produto_id: int
+usuario_id: int
+tipo: str
+quantidade: int
+observacao: str|" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1"><mxGeometry x="850" y="70" width="260" height="190" as="geometry"/></mxCell><mxCell id="cls_auth" value="AuthService|login()
+create_access_token()|" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1"><mxGeometry x="80" y="380" width="230" height="120" as="geometry"/></mxCell><mxCell id="cls_prodserv" value="ProductService|create_product()
+list_products()
+update_product()
+delete_product()|" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1"><mxGeometry x="420" y="360" width="260" height="160" as="geometry"/></mxCell><mxCell id="cls_stockserv" value="StockService|entrada()
+saida()
+list_movements()|" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1"><mxGeometry x="780" y="360" width="260" height="140" as="geometry"/></mxCell><mxCell id="repo" value="Repositories|UserRepository
+ProductRepository
+StockRepository|" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1"><mxGeometry x="420" y="610" width="260" height="130" as="geometry"/></mxCell><mxCell id="e_user_prod" value="1 cria N" style="endArrow=block;html=1;rounded=0;" parent="1" edge="1" source="cls_user" target="cls_prod"><mxGeometry relative="1" as="geometry"/></mxCell><mxCell id="e_prod_mov" value="1 possui N" style="endArrow=block;html=1;rounded=0;" parent="1" edge="1" source="cls_prod" target="cls_mov"><mxGeometry relative="1" as="geometry"/></mxCell><mxCell id="e_user_mov" value="1 registra N" style="endArrow=block;html=1;rounded=0;" parent="1" edge="1" source="cls_user" target="cls_mov"><mxGeometry relative="1" as="geometry"/></mxCell><mxCell id="e_auth_repo" style="endArrow=block;html=1;rounded=0;dashed=1;" parent="1" edge="1" source="cls_auth" target="repo"><mxGeometry relative="1" as="geometry"/></mxCell><mxCell id="e_prodserv_repo" style="endArrow=block;html=1;rounded=0;dashed=1;" parent="1" edge="1" source="cls_prodserv" target="repo"><mxGeometry relative="1" as="geometry"/></mxCell><mxCell id="e_stockserv_repo" style="endArrow=block;html=1;rounded=0;dashed=1;" parent="1" edge="1" source="cls_stockserv" target="repo"><mxGeometry relative="1" as="geometry"/></mxCell></root></mxGraphModel></diagram></mxfile>

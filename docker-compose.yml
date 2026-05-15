@@ -1,0 +1,29 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    container_name: stockflow-backend
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_URL: sqlite:////app/data/estoque.db
+      SECRET_KEY: troque-esta-chave-em-producao
+      ACCESS_TOKEN_EXPIRE_MINUTES: 60
+    volumes:
+      - stockflow_data:/app/data
+
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    container_name: stockflow-frontend
+    ports:
+      - "8501:8501"
+    environment:
+      API_URL: http://backend:8000
+    depends_on:
+      - backend
+
+volumes:
+  stockflow_data:
