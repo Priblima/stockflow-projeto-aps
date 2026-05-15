@@ -236,15 +236,18 @@ O arquivo `config.py` usa `@lru_cache` para entregar uma instância única das c
 
 ---
 
-## 10. Entregáveis para o professor
+## O que foi desenvolvido
 
-- Código-fonte completo.
-- API REST funcional com Swagger.
-- Frontend integrado em Streamlit.
-- Banco SQLite com SQLAlchemy.
-- JWT e hashing de senha.
+Este projeto inclui:
+
+- Código-fonte do backend em FastAPI.
+- Interface web desenvolvida com Streamlit.
+- Banco de dados SQLite com SQLAlchemy.
+- Autenticação de usuários com JWT e hashing de senha.
+- CRUD de produtos e controle básico de estoque.
 - Testes automatizados com Pytest.
-- Documentação de requisitos, arquitetura, instalação e testes.
-- Diagramas UML em `.drawio`.
-- Pipeline simples de CI em GitHub Actions.
+- Documentação da API gerada pelo Swagger/FastAPI.
+- Documentação do projeto com requisitos, arquitetura e instruções de execução.
+- Diagramas UML em arquivos `.drawio`.
+- Configuração simples de CI com GitHub Actions.
 
