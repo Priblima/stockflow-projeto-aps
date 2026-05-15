@@ -236,7 +236,7 @@ O arquivo `config.py` usa `@lru_cache` para entregar uma instância única das c
 
 ---
 
-## O que foi desenvolvido
+## 10. O que foi desenvolvido
 
 Este projeto inclui:
 
